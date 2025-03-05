@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playwrite+IT+Moderna:wght@100..400&display=swap');
 * {
   box-sizing: border-box; 
 }
@@ -5,7 +6,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: row;
-  font-family:  sans-serif;
+  font-family:  "Playwrite IT Moderna", cursive;
   margin: 0;
 }
 .col-1 {
@@ -102,17 +103,44 @@ header, footer, article, nav, aside {
   display: flex;
   flex-direction: column;
   list-style: none;
-  padding: 0;
+  padding-left: 20px;
+  position: fixed;
 }
 
 .navItems li{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-family: "Playwrite IT Moderna", cursive;
   padding: 2px 0;
   margin-left: 20px;
 }
 
+.navItems li a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color:black;
+  font-weight: bold;
+}
+
+.navItems li span {
+  margin-right: 8px;
+}
+
+.navItems li i {
+  font-size: 18px; 
+  color: #444;
+}
+
+.navItems li:hover{
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
 .navItems a{
   text-decoration: none;
-  color: #000; /* Ensure visible color */
+  color: #000;
   padding: 10px;
   display: block;
   font-weight: bold;
@@ -180,4 +208,33 @@ aside .asideContent h1{
 .card .text > button:hover{
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
+}
+/* media css */
+.mediaDiv{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 50px;
+}
+
+.media {
+  display: flex;
+  align-items: flex-start;
+  background: #A9B5DF;
+  box-shadow: 10px 10px 20px #050508, -10px -10px 20px #5d5a5a;
+  padding: 1em;
+  overflow: hidden;
+  border-radius: 3px;
+  max-width: 24em;
+  border-radius: 15px;
+}
+.media-object {
+  margin-left: 1em;
+  order: 1;
+}
+.media-body {
+  flex: 1;
+}
+.media-heading {
+  margin: 0 0 .5em;
 }
